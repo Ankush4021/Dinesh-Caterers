@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Dinesh Caterers</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <!-- Animation Links -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<style>
+    /* Hero Section */
+    .menu-hero {
+        position: relative;
+        background: url('/Assets/images/MenuBackgroundImg.jpg') center/cover no-repeat;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+    }
+
+    .menu-hero .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .menu-hero .hero-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .menu-hero h1 {
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-family: 'Abril Fatface', cursive;
+        text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+    }
+
+    .menu-hero h1:hover {
+        transform: translateY(-5px);
+        text-shadow: 4px 8px 12px rgba(0, 0, 0, 0.7);
+    }
+
+    .menu-hero p {
+        font-size: 1.5rem;
+        font-family: 'Dancing Script', cursive;
+        text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+    }
+
+    .menu-hero p:hover {
+        transform: translateY(-5px);
+        text-shadow: 4px 8px 12px rgba(0, 0, 0, 0.7);
+    }
+
+    .menu-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+</style>
+
+<body>
+
+    <div id="preloader">
+        <div class="food-loader"><i class="bi bi-fork-knife"></i></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/Assets/images/logo.png" alt="Dinesh Caterers Logo" loading="lazy">
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="text">Home</a></li>
+            <li><a href="aboutUs.html" class="text">About</a></li>
+            <li><a href="services.html" class="text">Services</a></li>
+            <li><a href="menu.html" class="text">Menu</a></li>
+            <li><a href="blog.html" class="text">Blog</a></li>
+            <li><a href="ContactUs.html" class="text">Contact Us</a></li>
+        </ul>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger" id="hamburger">
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="menu-hero fade-in">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 data-aos="zoom-in" data-aos-duration="1500">Discover The Menu</h1>
+            <p data-aos="zoom-in" data-aos-duration="1500">A taste for every mood.</p>
+        </div>
+    </section>
+
+    <!-- BreadcrumbF -->
+    <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>&gt;</span>
+        <span>Menu</span>
+    </nav>
+
+    <!-- Category Navbar -->
+    <section class="menu-section">
+        <div class="container">
+            <p class="menu-subtitle">Our Menu</p>
+            <h2 class="menu-title">Traditional tastes. Celebratory spreads. Your perfect menu starts here</h2>
+
+            <div class="menu-navbar">
+                <button class="tab-btn active" data-category="indian">North Indian</button>
+                <button class="tab-btn" data-category="south">South Indian</button>
+                <button class="tab-btn" data-category="chinese">Chinese</button>
+                <button class="tab-btn" data-category="punjabi">Punjabi</button>
+                <button class="tab-btn" data-category="garhwali">Garhwali</button>
+                <button class="tab-btn" data-category="sweets">Sweets & Deserts</button>
+                <button class="tab-btn" data-category="others">Others</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Menu Content -->
+    <div class="menu-content">
+
+        <!-- Indian -->
+        <div class="menu-category active" id="indian">
+            <div class="dish">
+                <img src="Assets/Menu Images/PannerButterMasala.jpg" alt="Paneer Butter Masala" loading="lazy">
+                <div>
+                    <h3>Paneer Butter Masala</h3>
+                    <p>Rich buttery gravy with paneer, mildly spiced and creamy.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/KadhaiPaneer.jpg" alt="Kadhai Paneer" loading="lazy">
+                <div>
+                    <h3>Kadhai Paneer</h3>
+                    <p>Paneer with bell peppers & onions, tossed in kadai masala.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/SahiPaneer.jpg" alt="Shahi Paneer" loading="lazy">
+                <div>
+                    <h3>Shahi Paneer</h3>
+                    <p>Paneer cubes cooked in a royal, creamy tomato-cashew gravy.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/DaalMakhni.jpg" alt="Dal Makhani" loading="lazy">
+                <div>
+                    <h3>Daal Makhni</h3>
+                    <p>Slow-cooked black lentils with butter & cream, signature Punjabi dish.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/DaalTadka.jpg" alt="Dal Tadka" loading="lazy">
+                <div>
+                    <h3>Dal Tadka</h3>
+                    <p>Yellow dal tempered with garlic, cumin & ghee, homely comfort food.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/MixVegCurry.jpg" alt="Mix Veg Curry" loading="lazy">
+                <div>
+                    <h3>Mix Veg Curry</h3>
+                    <p>Seasonal vegetables in a semi-gravy masala.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/CholeMasala.jpg" alt="Chole Masala" loading="lazy">
+                <div>
+                    <h3>Chole Masala</h3>
+                    <p>Spiced chickpeas cooked in Punjabi masala, served best with bhature.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/RajmaMasala.jpg" alt="Rajma Masala" loading="lazy">
+                <div>
+                    <h3>Rajma Masala</h3>
+                    <p>Red kidney beans cooked in onion-tomato gravy with North Indian spices.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/bhindiMasala.jpg" alt="Bhidi Masala" loading="lazy">
+                <div>
+                    <h3>Bhidi Masala</h3>
+                    <p>Ladyfinger cooked with onion-tomato masala.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/BegainBharta.jpg" alt="Baingan Bharta" loading="lazy">
+                <div>
+                    <h3>Baingan Bharta</h3>
+                    <p>Smoked eggplant mashed & cooked with onions & spices.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <div>
+                    <h3>And Many More</h3>
+                    <p>.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- South Indian -->
+        <div class="menu-category" id="south">
+            <div class="dish">
+                <img src="Assets/Menu Images/Dosa.jpg" alt="Dosa" loading="lazy">
+                <div>
+                    <h3>Dosa</h3>
+                    <p>Thin crispy rice crepe served with chutney & sambhar.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/Idly.jpg" alt="Idli Sambhar" loading="lazy">
+                <div>
+                    <h3>Idli Sambhar</h3>
+                    <p>TSoft steamed rice cakes served with flavorful sambhar & coconut chutney.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/Uttapam.jpg" alt="Rava Uttapam" loading="lazy">
+                <div>
+                    <h3>Rava Uttapam</h3>
+                    <p>Thick pancake-style dish with rava batter & veggies on top.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/MeduVada.jpg" alt="Medu Vada" loading="lazy">
+                <div>
+                    <h3>Medu Vada</h3>
+                    <p>Crispy urad dal doughnuts served with sambhar & chutney.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/LemonRice.jpg" alt="Lemon Rice" loading="lazy">
+                <div>
+                    <h3>Lemon Rice</h3>
+                    <p>Flavored with lemon juice, curry leaves & green chilli.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/CurdRice.jpg" alt="Curd Rice" loading="lazy">
+                <div>
+                    <h3>Curd Rice</h3>
+                    <p>Rice mixed with curd, tempered with mustard seeds & curry leaves.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <div>
+                    <h3>And Many More</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sweets & Deserts -->
+        <div class="menu-category" id="sweets">
+            <div class="dish">
+                <img src="Assets/Menu Images/GulabJamun.jpg" alt="Gulab Jamun" loading="lazy">
+                <div>
+                    <h3>Gulab Jamun</h3>
+                    <p>Soft fried milk solids soaked in saffron-flavored sugar syrup</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/Rasgulla.jpg" alt="Rasgulla" loading="lazy">
+                <div>
+                    <h3>Rasgulla</h3>
+                    <p>Light and spongy cottage cheese dumplings dipped in sugar syrup.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/Rasmalai.jpg" alt="Rasmalai" loading="lazy">
+                <div>
+                    <h3>Rasmalai</h3>
+                    <p>Soft paneer patties soaked in sweetened saffron-flavored milk.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/MotichurLaddu.jpg" alt="Motichoor Ladoo" loading="lazy">
+                <div>
+                    <h3>Motichoor Ladoo</h3>
+                    <p>Golden boondi pearls made into laddus, festive favorite.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/Jalebi.jpg" alt="Jalebi" loading="lazy">
+                <div>
+                    <h3>Jalebi</h3>
+                    <p>Crispy, golden fried spirals soaked in sugar syrup.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/KajuKatli.jpg" alt="Kaju Katli" loading="lazy">
+                <div>
+                    <h3>Kaju Katli</h3>
+                    <p>Rich cashew-based sweet, thin diamond-shaped barfi.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/BesanLaddu.jpg" alt="Besan Ladoo" loading="lazy">
+                <div>
+                    <h3>Besan Ladoo</h3>
+                    <p>Gram flour roasted in ghee, rolled into laddus.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/GazarHalwa.jpg" alt="Gajar Ka Halwa" loading="lazy">
+                <div>
+                    <h3>Gajar Ka Halwa</h3>
+                    <p>Carrot-based halwa slow-cooked with milk, sugar, and ghee</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/FruitCusturd-min.jpg" alt="Fruit Custard" loading="lazy">
+                <div>
+                    <h3>Fruit Custard</h3>
+                    <p>Seasonal fruits mixed in creamy custard base.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/IceCream-min.jpg" alt="Ice Cream (Assorted Flavors)" loading="lazy">
+                <div>
+                    <h3>Ice Cream (Assorted Flavors)</h3>
+                    <p>Classic dessert option for all age groups.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <div>
+                    <h3>And Many More</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chinese -->
+        <div class="menu-category" id="chinese">
+            <div class="dish">
+                <img src="Assets/Menu Images/VegHakkaNoodles-min.jpg" alt="Noodles" loading="lazy">
+                <div>
+                    <h3>Veg Hakka Noodles</h3>
+                    <p>Stir-fried noodles tossed with fresh vegetables and sauces.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/Manchurian-min.jpg" alt="Manchurian" loading="lazy">
+                <div>
+                    <h3>Veg Manchurian (Gravy/Dry)</h3>
+                    <p>Crispy vegetable balls cooked in tangy Indo-Chinese sauce.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/PannerButterMasala.jpg" alt="Chilli Paneer (Dry/Gravy)" loading="lazy">
+                <div>
+                    <h3>Chilli Paneer (Dry/Gravy)</h3>
+                    <p>Paneer cubes tossed in spicy chilli-garlic sauce with veggies.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/SpringRoll.jpg" alt="Spring Rolls" loading="lazy">
+                <div>
+                    <h3>Spring Rolls</h3>
+                    <p>Crispy fried rolls stuffed with vegetables and noodles.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/FriedRice-min.jpg" alt="Veg Fried Rice" loading="lazy">
+                <div>
+                    <h3>Veg Fried Rice</h3>
+                    <p>Classic Chinese-style fried rice with colorful veggies.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/FriedRice-min.jpg" alt="Schezwan Fried Rice" loading="lazy">
+                <div>
+                    <h3>Schezwan Fried Rice</h3>
+                    <p>Spicy version of fried rice with Schezwan sauce.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/ChilliPotato-min.jpg" alt="Honey Chilli Potatoes" loading="lazy">
+                <div>
+                    <h3>Honey Chilli Potatoes</h3>
+                    <p>Crispy potatoes glazed with sweet & spicy honey-chilli sauce.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/VegHakkaNoodles-min.jpg" alt="Vegetable Chowmein" loading="lazy">
+                <div>
+                    <h3>Vegetable Chowmein</h3>
+                    <p>Noodles stir-fried with soy sauce, garlic, and fresh veggies.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/Soup-min.jpg" alt="Hot & Sour Soup" loading="lazy">
+                <div>
+                    <h3>Hot & Sour Soup</h3>
+                    <p>Spicy, tangy soup with vegetables and Asian spices.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <div>
+                    <h3>And Many More</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Punjabi -->
+        <div class="menu-category" id="punjabi">
+            <div class="dish">
+                <img src="Assets/Menu Images/SarsoDaSaag.jpg" alt="Sarson da Saag" loading="lazy">
+                <div>
+                    <h3>Sarson da Saag</h3>
+                    <p>Mustard greens cooked with spices, served traditionally with makki di roti</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/PinjabiChole.jpg" alt="Punjabi Chole" loading="lazy">
+                <div>
+                    <h3>Punjabi Chole</h3>
+                    <p>Chickpeas cooked in spicy onion-tomato gravy, a classic Punjabi favorite.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/AlooParatha.jpg" alt="Aloo Paratha" loading="lazy">
+                <div>
+                    <h3>Aloo Paratha</h3>
+                    <p>Stuffed potato flatbread, served with butter or curd.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/MalaiKhofta.jpg" alt="Malai Kofta" loading="lazy">
+                <div>
+                    <h3>Malai Kofta</h3>
+                    <p>Soft vegetable dumplings in creamy tomato-based gravy.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/Pulao.jpg" alt="Vegetable Pulao" loading="lazy">
+                <div>
+                    <h3>Vegetable Pulao</h3>
+                    <p>Aromatic rice cooked with seasonal vegetables and mild spices.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/PaneerTikka.jpg" alt="Tandoori Paneer Skewers" loading="lazy">
+                <div>
+                    <h3>Tandoori Paneer Skewers</h3>
+                    <p>Marinated paneer grilled to perfection with bell peppers.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/DaalMakhni.jpg" alt="Dal Makhani" loading="lazy">
+                <div>
+                    <h3>Dal Makhani</h3>
+                    <p>Slow-cooked black lentils with butter and cream, Punjabi classic.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <div>
+                    <h3>And Many More</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Garhwali -->
+        <div class="menu-category" id="garhwali">
+            <div class="dish">
+                <img src="Assets/Menu Images/kafauli-min.jpg" alt="Kafuli" loading="lazy">
+                <div>
+                    <h3>Kafuli</h3>
+                    <p>Spinach (or leafy greens) cooked with buttermilk & rice paste, a traditional pahadi curry.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/phannu-min.jpg" alt="Phaanu" loading="lazy">
+                <div>
+                    <h3>Phaanu</h3>
+                    <p>Protein-rich curry made with soaked & ground pulses like gahat (kulthi dal).</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/Aloo-Gutka-Thumbnail-min.jpg" alt="Aloo Ke Gutke" loading="lazy">
+                <div>
+                    <h3>Aloo Ke Gutkei</h3>
+                    <p>Spicy stir-fried pahadi potatoes tempered with jakhiya seeds.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/DaalTadka.jpg" alt="Chainsoo" loading="lazy">
+                <div>
+                    <h3>Chainsoo</h3>
+                    <p>Roasted black gram curry, earthy & full of flavour.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/jhangoora ki kher-min.jpg" alt="Jhangora Ki Kheer" loading="lazy">
+                <div>
+                    <h3>Jhangora Ki Kheer</h3>
+                    <p>Sweet pudding made with barnyard millet, milk & dry fruits.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="Assets/Menu Images/Bhang-Ki-Chutney--min.jpg" alt="Bhang Ki Chutney" loading="lazy">
+                <div>
+                    <h3>Bhang Ki Chutney</h3>
+                    <p>Unique chutney made with roasted hemp seeds, tangy & nutty in taste.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <div>
+                    <h3>And Many More...</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Note For More Dishes -->
+    <div class="note-container fade-in">
+        <div class="note">
+            <p><strong>Note :- </strong> The dishes you see here are only a glimpse of what we offer. At Dinesh
+                Caterers, our catering menu is completely customizable—from North & South Indian classics to
+                Rajasthani,
+                Punjabi, Chinese and Continental delicacies. Have a favourite dish that's not listed? Just ask, and
+                we'll happily craft a menu tailored to your taste, event theme and budget, making every celebration
+                as
+                unique and flavorful as you imagine.</p>
+        </div>
+    </div>
+
+    <!-- Special Dishes Offers -->
+    <section id="popular-dishes" class="popular-dishes">
+        <h2 class="section-title">🍴 Popular Dishes of Our Caterers 🍴</h2>
+        <p class="section-subtitle">Our most loved & special catering delights</p>
+
+        <div class="dishes-grid">
+            <div class="special-dish">
+                <img src="Assets/Menu Images/Biryani.jpg" alt="Biryani">
+                <div class="dishes-content">
+                    <h3>Biryani</h3>
+                    <p class="dish-desc">Aromatic rice cooked with flavorful spices & veg/Non-Veg.</p>
+                </div>
+            </div>
+            <div class="special-dish">
+                <img src="Assets/Menu Images/PaneerTikka.jpg" alt="Paneer Tikka">
+                <div class="dishes-content">
+                    <h3>Paneer Tikka</h3>
+                    <p class="dish-desc">Grilled cottage cheese cubes marinated with Indian spices.</p>
+                </div>
+            </div>
+            <div class="special-dish">
+                <img src="Assets/Menu Images/IndianSweets.jpg" alt="Indian Sweets">
+                <div class="dishes-content">
+                    <h3>Indian Sweets</h3>
+                    <p class="dish-desc">Traditional sweets that add joy to every occasion.</p>
+                </div>
+            </div>
+            <div class="special-dish">
+                <img src="Assets/Menu Images/SpringRoll.jpg" alt="Spring Rolls">
+                <div class="dishes-content">
+                    <h3>Spring Rolls</h3>
+                    <p class="dish-desc">Crispy fried rolls stuffed with vegetables and noodles.</p>
+                </div>
+            </div>
+            <div class="special-dish">
+                <img src="Assets/Menu Images/Dosa.jpg" alt="Dosa">
+                <div class="dishes-content">
+                    <h3>Dosa</h3>
+                    <p class="dish-desc">Crispy South Indian dosa stuffed with spicy potato filling.</p>
+                </div>
+            </div>
+            <div class="special-dish">
+                <img src="Assets/Menu Images/DaalMakhni.jpg" alt="Daal Makhni">
+                <div class="dishes-content">
+                    <h3>Daal Makhani</h3>
+                    <p class="dish-desc">Slow-cooked black lentils with butter and cream, Punjabi classic.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class=" menu-btn">
+            <a href="ContactUs.html" class="btn-more"> Book Now </a>
+        </div>
+    </section>
+
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonial-section">
+        <h3 class="sub-title text">Testimonials</h3>
+        <h2 class="main-title text">What Our Clients Says</h2>
+
+        <div class="testimonial-container">
+
+            <!-- Testimonial 1 -->
+            <div class="testimonial-box">
+                <p class="review">
+                    <span class="quote">❝</span>
+                    Dinesh Caterers made our wedding truly special! From the lavish buffet to the live counters,
+                    every guest praised the food. Their team was professional, punctual, and ensured everything was
+                    perfect. <span class="quote">❞</span>
+                </p>
+                <h4 class="author">Anjali & Rohan</h4>
+                <p class="location">Dehradun</p>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-box">
+                <p class="review">
+                    <span class="quote">❝</span>
+                    Humne family havan ke liye satvik catering book ki thi. Without onion-garlic bhi khana itna
+                    tasty aur shuddh tha ki sabko bahut pasand aaya. Prasad aur bhojan dono hi perfect bane.
+                    <span class="quote">❞</span>
+                </p>
+                <h4 class="author">Meena Joshi </h4>
+                <p class="location">Ahmedabad</p>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-box">
+                <p class="review">
+                    <span class="quote">❝</span>
+                    We booked Dinesh Caterers for a corporate conference of 300+ people, and the service was
+                    flawless. The packed meals and live counters were hygienic, delicious, and exactly what we
+                    wanted.
+                    <span class="quote">❞</span>
+                </p>
+                <h4 class="author">Arjun Mehra</h4>
+                <p class="location">Dehradun</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="main-content">
+
+            <div class="footer-container">
+                <!-- About section -->
+                <div class="footer-col">
+                    <h3>Dinesh Caterers</h3>
+                    <p>
+                        Dehradun's trusted catering service, bringing flavor & tradition to weddings, poojas &
+                        celebrations
+                        across Uttarakhand and beyond.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutUs.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="ContactUs.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>Email: <a href="mailto:payalchndra2025@gmail.com">payalchndra2025@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+919634185883">+91 9634185883</a></p>
+                    <p>Address: Rajeev Nagar, Doiwala
+                        Dehradun, Uttrakhand 248401</p>
+                </div>
+
+                <!-- Social Media -->
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/15ZTpyqDC4/" target="_blank"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/dineshcaterers15/" target="_blank"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="tel:+919634185883"><i class="bi bi-whatsapp"></i></a>
+                        <a href="https://twitter.com/DineshCateres15" target="_blank"><i
+                                class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 <span>Dinesh Caterers </span> All Rights Reserved | Made by <span>Ankush</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Menu Tabs
+        const tabBtns = document.querySelectorAll(".tab-btn");
+        const categories = document.querySelectorAll(".menu-category");
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                // reset active
+                tabBtns.forEach(b => b.classList.remove("active"));
+                categories.forEach(c => {
+                    c.classList.remove("active");
+                    c.querySelectorAll(".dish").forEach(d => d.classList.remove("show")); // reset dishes
+                });
+
+                // activate clicked tab
+                btn.classList.add("active");
+                const activeCategory = document.getElementById(btn.dataset.category);
+                activeCategory.classList.add("active");
+
+                // re-observe new dishes
+                activeCategory.querySelectorAll(".dish").forEach((dish, index) => {
+                    dish.style.transitionDelay = `${index * 0.08}s`; // stagger delay
+                    observer.observe(dish);
+                });
+            });
+        });
+
+        // IntersectionObserver for smooth reveal
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        // Initial observe (first active tab)
+        document.querySelectorAll(".menu-category.active .dish").forEach((dish, index) => {
+            dish.style.transitionDelay = `${index * 0.08}s`;
+            observer.observe(dish);
+        });
+
+
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
