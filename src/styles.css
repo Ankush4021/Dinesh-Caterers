@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+
+  body {
+    @apply min-w-[320px] bg-cream font-sans text-ink antialiased;
+  }
+
+  ::selection {
+    @apply bg-light-gold text-ink;
+  }
+}
+
+/* Jo log "reduce motion" on rakhte hain unke liye animation band */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

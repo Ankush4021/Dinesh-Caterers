@@ -1,0 +1,8 @@
+export const services = [
+  { title: 'Wedding Celebrations', description: 'A thoughtfully planned menu, beautiful presentation and attentive service for a day everyone will remember.', image: 'WeddingImg.webp', detail: 'From welcome refreshments and starters to a complete dinner spread, we coordinate food service around your wedding schedule and guest preferences.' },
+  { title: 'Corporate Events', description: 'Reliable catering for meetings, conferences, office celebrations and team gatherings.', image: 'CorporateImg.webp', detail: 'Choose from breakfast, working lunch, high tea, buffet and event-day service options for teams and guests.' },
+  { title: 'Pooja & Satvik Events', description: 'Carefully prepared vegetarian food for poojas, family rituals and meaningful occasions.', image: 'SativPoojaImg.webp', detail: 'We can plan a simple, traditional vegetarian menu with serving arrangements suited to your event.' },
+  { title: 'Birthdays & Gatherings', description: 'A joyful spread for birthdays, anniversaries, family functions and get-togethers.', image: 'BirthdayImg.webp', detail: 'Make hosting easier with a menu and service plan that fits your guest count, venue and celebration style.' },
+  { title: 'Custom Catering', description: 'A menu built around your occasion, taste, budget and the people joining you.', image: 'CustomizeMenuImg.webp', detail: 'Tell us what you have in mind. We will discuss menu combinations, service format and event requirements with you.' },
+  { title: 'Live Counters & Buffets', description: 'Freshly served food stations that add energy and choice to your event.', image: 'LiveCounterImg.webp', detail: 'Ask us about live counters, buffet layouts and a mix of familiar favorites with regional specialties.' }
+];
