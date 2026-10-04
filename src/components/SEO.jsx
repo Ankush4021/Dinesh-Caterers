@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const SITE_URL = 'https://dineshcaterers.in';
+const SITE_URL = 'https://www.dineshcaterers.in';
 
 const pageMetadata = {
   '/': {
@@ -45,54 +45,74 @@ const businessSchema = {
 };
 
 function setMeta(attribute, key, content) {
-  let element = document.head.querySelector(`meta[${attribute}="${key}"]`);
+  let element = document.head.querySelector(
+    `meta[${attribute}="${key}"]`
+  );
+
   if (!element) {
     element = document.createElement('meta');
     element.setAttribute(attribute, key);
     document.head.appendChild(element);
   }
+
   element.setAttribute('content', content);
 }
 
 export default function SEO() {
   const { pathname } = useLocation();
-  const normalizedPath = pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
+
+  const normalizedPath =
+    pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
 
   useEffect(() => {
-    const isKnownPage = Object.prototype.hasOwnProperty.call(pageMetadata, normalizedPath);
+    const isKnownPage = Object.prototype.hasOwnProperty.call(
+      pageMetadata,
+      normalizedPath
+    );
+
     const page = pageMetadata[normalizedPath] || {
       title: 'Page Not Found | Dinesh Caterers',
       description: 'The requested page could not be found on Dinesh Caterers.',
     };
-    const canonicalUrl = `${SITE_URL}${pathname === '/' ? '/' : pathname.replace(/\/$/, '')}`;
+
+    const canonicalUrl = `${SITE_URL}${normalizedPath}`;
 
     document.title = page.title;
+
     setMeta('name', 'description', page.description);
+    setMeta('name', 'robots', isKnownPage ? 'index, follow' : 'noindex, follow');
+
     setMeta('property', 'og:type', 'website');
     setMeta('property', 'og:site_name', 'Dinesh Caterers');
     setMeta('property', 'og:title', page.title);
     setMeta('property', 'og:description', page.description);
     setMeta('property', 'og:url', canonicalUrl);
-    setMeta('name', 'twitter:card', 'summary');
+
+    setMeta('name', 'twitter:card', 'summary_large_image');
     setMeta('name', 'twitter:title', page.title);
     setMeta('name', 'twitter:description', page.description);
-    setMeta('name', 'robots', isKnownPage ? 'index, follow' : 'noindex, follow');
 
-    let canonical = document.head.querySelector('link[rel="canonical"]');
+    let canonical = document.head.querySelector(
+      'link[rel="canonical"]'
+    );
+
     if (!canonical) {
       canonical = document.createElement('link');
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
+
     canonical.setAttribute('href', canonicalUrl);
 
     let schema = document.getElementById('dinesh-business-schema');
+
     if (!schema) {
       schema = document.createElement('script');
       schema.id = 'dinesh-business-schema';
       schema.type = 'application/ld+json';
       document.head.appendChild(schema);
     }
+
     schema.textContent = JSON.stringify(businessSchema);
   }, [normalizedPath]);
 
