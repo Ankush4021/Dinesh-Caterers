@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import WhatsAppButton from './components/WhatsAppButton.jsx';
+import SEO from './components/SEO.jsx';
 
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
@@ -31,6 +32,7 @@ export default function App() {
     // overflow-x-clip use kiya (overflow-hidden nahi) taaki sticky navbar kaam kare.
     <div className="min-h-screen overflow-x-clip bg-cream text-ink">
       <ScrollToTop />
+      <SEO />
       <Navbar />
 
       <AnimatePresence mode="wait">
