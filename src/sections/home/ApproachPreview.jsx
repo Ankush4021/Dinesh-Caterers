@@ -24,12 +24,12 @@ export default function ApproachPreview() {
         />
 
         <p className="max-w-[480px] text-base leading-[1.85] text-[#d1c7bc] md:text-[17px]">
-          Great catering is about more than what’s on the plate. It’s how the
+          Great catering is about more than what's on the plate. It's how the
           whole experience makes your guests feel.
         </p>
 
-        <Button variant="light" to="/approach">
-          Our approach
+        <Button variant="light" to="/menu">
+          Check Menu
         </Button>
       </Reveal>
     </Section>

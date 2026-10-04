@@ -70,11 +70,11 @@ export default function Footer() {
           </a>
 
           <a
-            href="mailto:payalchndra2025@gmail.com"
+            href="mailto:support.dineshcaterers@gmail.com"
             className={`flex items-center gap-2 break-all ${colLink}`}
           >
             <Mail size={15} className="shrink-0 text-light-gold" />
-            payalchndra2025@gmail.com
+            support.dineshcaterers@gmail.com
           </a>
 
           {locations.map((location, index) => (
@@ -103,7 +103,7 @@ export default function Footer() {
           <Label>GOOD FOOD, GOOD COMPANY</Label>
 
           <p className="my-5 font-serif text-[23px] italic leading-normal text-[#e7ddd0]">
-            Let’s make your next gathering one to remember.
+            Let's make your next gathering one to remember.
           </p>
 
           <Link

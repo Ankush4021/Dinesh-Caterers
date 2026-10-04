@@ -7,7 +7,7 @@ import Button from '../../components/Button.jsx';
 const methods = [
   { icon: Phone, label: 'CALL US', value: '+91 96341 85883', href: 'tel:+919634185883' },
    {icon: Phone, label: 'CALL US', value: '+91 96900 70133', href: 'tel:+919690070133' },
-  { icon: Mail, label: 'EMAIL', value: 'payalchndra2025@gmail.com', href: 'mailto:payalchndra2025@gmail.com' },
+  { icon: Mail, label: 'EMAIL', value: 'support.dineshcaterers@gmail.com', href: 'mailto:support.dineshcaterers@gmail.com' },
 ];
 
 const whatsappLink =
@@ -18,7 +18,7 @@ export default function ContactInfo() {
     <Reveal x={-40} y={0} className="max-w-[520px] space-y-6">
       <SectionHeading
         label="START A CONVERSATION"
-        title="We’d be happy"
+        title="We'd be happy"
         accent="to hear from you."
       />
 

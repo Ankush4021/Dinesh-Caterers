@@ -33,7 +33,7 @@ export default function Menu() {
         title="A feast for"
         accent="every occasion."
         text="From familiar favourites to regional specialities, discover food made to bring people together."
-        image="/assets/images/MenuBackgroundImg.webp"
+        image="/assets/menu/PaneerTikka.webp"
         imagePosition="center"
         overlay="from-ink/85 via-ink/55 to-ink/20"
         primaryCta={{
