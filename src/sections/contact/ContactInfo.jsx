@@ -30,7 +30,7 @@ export default function ContactInfo() {
 
       <div className="grid gap-4">
         {methods.map(({ icon: Icon, label, value, href }) => (
-          <a key={label} href={href} className="flex items-center gap-3.5">
+          <a key={href} href={href} className="flex items-center gap-3.5">
             <span className="grid h-11 w-11 shrink-0 place-items-center border border-[#e0d4c6] text-[#9d7048]">
               <Icon size={18} />
             </span>
